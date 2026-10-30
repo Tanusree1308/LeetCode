@@ -1,0 +1,23 @@
+class Solution {
+    public int product(int n){
+        int sum=1;
+        while(n!=0){
+            int num=n%10;
+            sum *=num;
+            n=n/10;
+        }
+        return sum;
+    }
+    public int sum(int n){
+        int num=0;
+        while(n!=0){
+            int sum=n%10;
+            num +=sum;
+            n=n/10;
+        }
+        return num;
+    }
+    public int subtractProductAndSum(int n) {
+        return product(n)-sum(n);
+    }
+}
